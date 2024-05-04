@@ -5,7 +5,7 @@
 
 const arr= [1, 2, 3, 4, 5]
 for (const num of arr) {
-    // console.log(num);
+    // console.log(num); // 1 2 3 4 5
 }
 
 const greetings= "hello world!"
@@ -26,8 +26,13 @@ for (const [key,value] of map) {
     // console.log(key, ':', value);
 }
 
-//for loop on object?
+// for in loop on map
+for (const key in map) {
+    // console.log(key); //nothins printed cause map is not iterable
+}
 
+
+//for of loop on object?
 const myObj={
     'game1': 'NFS',
     'game2': 'spiderman'
