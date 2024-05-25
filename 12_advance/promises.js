@@ -1,4 +1,6 @@
 const promiseOne= new Promise(function(resolve, reject){
+    //do an async tash
+    //DB calls, cryptography, network
     setTimeout(function(){
         console.log('Async task is completed');
         resolve();
@@ -76,4 +78,27 @@ async function consumePromiseFive(){
 }
 consumePromiseFive();
 
-async 
+// async function getAllUsers(){
+//     try {
+//     const response = await fetch('https://jsonplaceholder.typicode.com/users') //network request
+//     const data = await response.json()
+//     console.log(data);
+//     } catch (error) {
+//         console.log(error);
+        
+//     }
+// }
+// getAllUsers()
+
+//same by using .then() .catch()
+
+fetch('https://jsonplaceholder.typicode.com/users')
+.then((response)=>{
+    return response.json;
+})
+.then((data)=>{
+    console.log(data);
+})
+.catch((error)=>{
+    console.log(error);
+})
