@@ -18,9 +18,18 @@ function User(username, loginCount, isLoggedIn){
     this.loginCount=loginCount;
     this.isLoggedIn=isLoggedIn;
     
+    this.greeting = function(){
+        console.log(`welcome${this.username}`);
+    }
     return this;
 }
 
-const userOne= User("hitesh", 12, true)
-const UserTwo=  User("chaiAURcode", 12, false)  //values override ho jayengi userOne ki userTwo se
-console.log(userOne);
+// const UserOne= new User("hitesh", 12, true)
+// const UserTwo=  new User("chaiAURcode", 12, false)  //values override ho jayengi userOne ki userTwo se
+const UserOne= new User("hitesh", 12, true)
+const UserTwo=  new User("chaiAURcode", 12, false)
+console.log(UserOne);
+console.log(UserTwo);
+
+//new use kerne pr - empty object create hota jisko we call instance
+
